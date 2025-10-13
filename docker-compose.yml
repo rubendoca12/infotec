@@ -14,7 +14,6 @@ services:
   application: 
     image: 'bitnamilegacy/laravel:latest' 
     
-    # 🚨 Comando Correcto: Esto ignora el script de Bitnami y mantiene el servidor vivo.
     command: php artisan serve --host=0.0.0.0 --port=8000
 
     environment:
