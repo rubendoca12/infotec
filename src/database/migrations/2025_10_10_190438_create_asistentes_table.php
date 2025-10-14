@@ -13,7 +13,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('email')->unique();
-            $table->string('telefono')->nullable(); // Teléfono puede ser opcional
+            $table->string('telefono')->nullable(); 
             
             // Clave foránea que referencia a la tabla 'eventos'
             $table->foreignId('evento_id')->constrained()->onDelete('cascade');
