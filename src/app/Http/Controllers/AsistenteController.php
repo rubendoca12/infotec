@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Asistente;
+use Illuminate\Support\Facades\Validator;
+
 
 class AsistenteController extends Controller
 {
@@ -17,7 +19,7 @@ class AsistenteController extends Controller
     {
         $validated = $request->validate([
             'nombre' => 'required|string|max:255',
-            'correo' => 'required|email|unique:asistentes,correo',
+            'email' => 'required|email|unique:asistentes,email',
             'telefono' => 'nullable|string|max:20',
             'evento_id' => 'required|exists:eventos,id',
         ]);

@@ -15,7 +15,7 @@ class Asistente extends Model
     ];
     
     /**
-     * Define la relación con el modelo Evento (Asistente pertenece a un Evento).
+     *(Asistente pertenece a un Evento).
      */
     public function evento()
     {
